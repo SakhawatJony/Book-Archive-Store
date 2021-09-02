@@ -1,8 +1,8 @@
-//spinner functuion
+//spinner functuion start
 const DisplaySpinner = spinner => {
     document.getElementById('spinner-show').style.display = spinner
 }
-
+//spinner functuion ends
 
 // search input dispaly show program
 
@@ -20,13 +20,17 @@ const searchBook = () => {
   
 };
 
-const dispalySearchResult = searchItemValue => {
+// search result 
+    const dispalySearchResult = searchItemValue => {
     const searchResult = document.getElementById('search-result');
     searchResult.textContent = ' ';
+    
+    // total result valu & spinner start
     const books = searchItemValue.docs;
     const totalResult = document.getElementById('total-result');
     totalResult.innerText= searchItemValue.numFound;
-    
+
+    // total result valu & spinner Ends
 
 
 
@@ -38,14 +42,14 @@ const dispalySearchResult = searchItemValue => {
     
    }
 
-else{
+else {
     const resultNotPound = document.getElementById('resultnotpound');
     resultNotPound.textContent = ' ';
 }
    // result not pound ends
 
    
-//    loop for  data loding start
+//    looping for  all  data loding start
     books.forEach(book => {
         const div = document.createElement('div');
         div.classList.add('col');
@@ -63,10 +67,9 @@ else{
         searchResult.appendChild(div);
    
         });
-
         DisplaySpinner('none')
         
-//    loop for  data loding start
+//    looping for  all  data loding ends
 
    }
 
@@ -74,5 +77,5 @@ else{
 
 
 
-
+   
 
