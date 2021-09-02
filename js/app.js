@@ -28,7 +28,7 @@ const searchBook = () => {
     // total result valu & spinner start
     const books = searchItemValue.docs;
     const totalResult = document.getElementById('total-result');
-    totalResult.innerText= searchItemValue.numFound;
+    totalResult.innerText= `Display Show ${books.length} find result ${searchItemValue.numFound}`;
 
     // total result valu & spinner Ends
 
@@ -50,7 +50,7 @@ else {
 
    
 //    looping for  all  data loding start
-    books.forEach(book => {
+books.forEach(book => {
         const div = document.createElement('div');
         div.classList.add('col');
         div.innerHTML =`
